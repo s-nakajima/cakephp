@@ -277,7 +277,7 @@ class StringTemplate
      * templates to change how attributes are formatted.
      *
      * @param array<string, mixed>|null $options Array of options.
-     * @param array<string, bool>|null $exclude Array of options to be excluded, the options here will not be part of the return.
+     * @param array<string>|null $exclude Array of options to be excluded, the options here will not be part of the return.
      * @return string Composed attributes.
      */
     public function formatAttributes(?array $options, ?array $exclude = null): string
