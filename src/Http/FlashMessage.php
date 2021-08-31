@@ -132,7 +132,7 @@ class FlashMessage
      * ```
      *
      * @param \Throwable $exception Exception instance.
-     * @param array $options An array of options.
+     * @param array<string, mixed> $options An array of options.
      * @return void
      * @see FlashMessage::set() For list of valid options
      */

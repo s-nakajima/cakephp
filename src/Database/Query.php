@@ -703,8 +703,8 @@ class Query implements ExpressionInterface, IteratorAggregate
      * $query->join(['something' => 'different_table'], [], true); // resets joins list
      * ```
      *
-     * @param array|string $tables list of tables to be joined in the query
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, mixed>|string $tables list of tables to be joined in the query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @param bool $overwrite whether to reset joins with passed list or not
      * @see \Cake\Database\TypeFactory
      * @return $this
@@ -995,7 +995,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * The safest thing you can do is to never use string conditions.
      *
      * @param \Cake\Database\ExpressionInterface|\Closure|array|string|null $conditions The conditions to filter on.
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @param bool $overwrite whether to reset conditions with passed list or not
      * @see \Cake\Database\TypeFactory
      * @see \Cake\Database\Expression\QueryExpression
@@ -1070,7 +1070,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      *
      * @param string $field Field
      * @param array $values Array of values
-     * @param array $options Options
+     * @param array<string, mixed> $options Options
      * @return $this
      */
     public function whereInList(string $field, array $values, array $options = [])
@@ -1097,7 +1097,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      *
      * @param string $field Field
      * @param array $values Array of values
-     * @param array $options Options
+     * @param array<string, mixed> $options Options
      * @return $this
      */
     public function whereNotInList(string $field, array $values, array $options = [])
@@ -1125,7 +1125,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      *
      * @param string $field Field
      * @param array $values Array of values
-     * @param array $options Options
+     * @param array<string, mixed> $options Options
      * @return $this
      */
     public function whereNotInListOrNull(string $field, array $values, array $options = [])
@@ -1198,7 +1198,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * `WHERE (title = 'Foo') AND (author_id = 1 OR author_id = 2)`
      *
      * @param \Cake\Database\ExpressionInterface|\Closure|array|string $conditions The conditions to add with AND.
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @see \Cake\Database\Query::where()
      * @see \Cake\Database\TypeFactory
      * @return $this
@@ -1408,7 +1408,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * not sanitized by the query builder.
      *
      * @param \Cake\Database\ExpressionInterface|\Closure|array|string|null $conditions The having conditions.
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @param bool $overwrite whether to reset conditions with passed list or not
      * @see \Cake\Database\Query::where()
      * @return $this
@@ -1433,7 +1433,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * not sanitized by the query builder.
      *
      * @param \Cake\Database\ExpressionInterface|\Closure|array|string $conditions The AND conditions for HAVING.
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @see \Cake\Database\Query::andWhere()
      * @return $this
      */
@@ -2299,7 +2299,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * @param \Cake\Database\ExpressionInterface|\Closure|array|string|null $append Expression or builder function to append.
      *   to append.
      * @param string $conjunction type of conjunction to be used to operate part
-     * @param array $types associative array of type names used to bind values to query
+     * @param array<string, string> $types Associative array of type names used to bind values to query
      * @return void
      */
     protected function _conjugate(string $part, $append, $conjunction, array $types): void
@@ -2388,7 +2388,7 @@ class Query implements ExpressionInterface, IteratorAggregate
      * Returns an array that can be used to describe the internal state of this
      * object.
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function __debugInfo(): array
     {
