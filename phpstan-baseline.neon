@@ -73,6 +73,12 @@ parameters:
 			path: src/Controller/ControllerFactory.php
 
 		-
+			message: '#^Return type \(void\) of method Cake\\Core\\ServiceProvider\:\:boot\(\) should be compatible with return type \(never\) of method League\\Container\\ServiceProvider\\BootableServiceProviderInterface\:\:boot\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Core/ServiceProvider.php
+
+		-
 			message: '#^Trait Cake\\Core\\TestSuite\\ContainerStubTrait is used zero times and is not analysed\.$#'
 			identifier: trait.unused
 			count: 1

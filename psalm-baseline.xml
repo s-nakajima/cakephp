@@ -44,6 +44,11 @@
       <code><![CDATA[is_array($pluginLoadConfig)]]></code>
     </RedundantCondition>
   </file>
+  <file src="src/Core/ServiceProvider.php">
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[void]]></code>
+    </ImplementedReturnTypeMismatch>
+  </file>
   <file src="src/Event/EventDispatcherTrait.php">
     <MoreSpecificImplementedParamType>
       <code><![CDATA[$subject]]></code>
